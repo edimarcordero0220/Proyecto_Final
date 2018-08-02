@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head runat="server">ss
+<head runat="server">
      <meta charset="utf-8" />
     <title><%: Page.Title %> - Gestion de Ventas</title>
     <link href="/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
