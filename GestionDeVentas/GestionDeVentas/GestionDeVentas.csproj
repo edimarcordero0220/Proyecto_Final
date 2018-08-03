@@ -153,6 +153,11 @@
     <Compile Include="BLL\CuadreVendedorBLL.cs" />
     <Compile Include="BLL\DetalleCuadreBLL.cs" />
     <Compile Include="BLL\GastosBLL.cs" />
+    <Compile Include="BLL\PagosBLL.cs" />
+    <Compile Include="BLL\SubsidiosBLL.cs" />
+    <Compile Include="BLL\VendedorDetalleBLL.cs" />
+    <Compile Include="BLL\VendedoresBLL.cs" />
+    <Compile Include="BLL\VentasBLL.cs" />
     <Compile Include="DAL\GestionVentaDb.cs" />
     <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\Repositorio.cs" />
