@@ -149,6 +149,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CategoriasBLL.cs" />
+    <Compile Include="BLL\CuadreVendedorBLL.cs" />
+    <Compile Include="BLL\DetalleCuadreBLL.cs" />
+    <Compile Include="BLL\GastosBLL.cs" />
+    <Compile Include="DAL\GestionVentaDb.cs" />
+    <Compile Include="DAL\IRepository.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +168,10 @@
     <Compile Include="Entidades\CuadresVendedores.cs" />
     <Compile Include="Entidades\Gastos.cs" />
     <Compile Include="Entidades\Pagos.cs" />
+    <Compile Include="Entidades\Subsidios.cs" />
+    <Compile Include="Entidades\Vendedores.cs" />
+    <Compile Include="Entidades\VendedoresDetalles.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
