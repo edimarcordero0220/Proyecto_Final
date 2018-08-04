@@ -72,9 +72,9 @@
                 <div class="form-group" style="display: inline-block">
                    <%-- <asp:Button  class="btn btn-info" ID="LimpiarCampos" runat="server" CausesValidation="False" Text="Limpiar"  TabIndex="1" OnClick="LimpiarCampos_Click"  />--%>
                     
-                    <asp:button runat="server" class="btn btn-info" text="Limpiar" ID="LimpiarCampos" />
-                    <asp:button runat="server" class="btn btn-success" text="Guardar" ID="GuardarButton" />
-                    <asp:button runat="server" class="btn btn-danger" text="Eliminar" ID="AnularButton" />
+                    <asp:button runat="server" class="btn btn-info" text="Limpiar" ID="LimpiarCampos" OnClick="LimpiarCampos_Click" />
+                    <asp:button runat="server" class="btn btn-success" text="Guardar" ID="GuardarButton" OnClick="GuardarButton_Click" />
+                    <asp:button runat="server" class="btn btn-danger" text="Eliminar" ID="AnularButton" OnClick="AnularButton_Click" />
                    <%-- <asp:Button class="btn btn-success" ID="GuardarButton" runat="server" CausesValidation="True" Text="Guardar"  TabIndex="2" OnClick="GuardarButton_Click" />--%>
                    <%-- <asp:Button class="btn btn-primary" ID="ImprimirButton" runat="server" CausesValidation="True" Text="Imprimir"  TabIndex="3" />
                    <%-- <asp:Button class="btn btn-danger" ID="AnularButton" runat="server" CausesValidation="False" Text="Eliminar" TabIndex="4" OnClick="AnularButton_Click" />--%>
