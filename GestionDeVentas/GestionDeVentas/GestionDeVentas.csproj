@@ -126,6 +126,8 @@
     <Content Include="Registros\rCuadreVend.aspx" />
     <Content Include="Registros\rGastos.aspx" />
     <Content Include="Registros\rPagos.aspx" />
+    <Content Include="Registros\RSubsidios.aspx" />
+    <Content Include="Registros\RVendedores.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -225,6 +227,20 @@
     </Compile>
     <Compile Include="Registros\rPagos.aspx.designer.cs">
       <DependentUpon>rPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RSubsidios.aspx.cs">
+      <DependentUpon>RSubsidios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RSubsidios.aspx.designer.cs">
+      <DependentUpon>RSubsidios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RVendedores.aspx.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVendedores.aspx.designer.cs">
+      <DependentUpon>RVendedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
