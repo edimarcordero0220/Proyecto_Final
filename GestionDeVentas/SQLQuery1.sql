@@ -1,6 +1,6 @@
-﻿CREATE TABLE Categorias (
-	CategoriaId int primary key identity,	
-	MaximoVentaDefault int,	
-	
-	Nombre varchar(40),
-	)
+﻿CREATE TABLE CuadresVendedores (
+	CuadreId int primary key identity,	
+	VendedorId int,	
+	Fecha datetime,
+	Concepto varchar(100),
+	Monto float)

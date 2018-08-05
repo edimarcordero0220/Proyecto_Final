@@ -72,6 +72,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CodigoBD.txt" />
+    <Content Include="Consultas\cCuadreVendedor.aspx" />
+    <Content Include="Consultas\cDetalleVendedor.aspx" />
+    <Content Include="Consultas\cGastos.aspx" />
+    <Content Include="Consultas\cPagos.aspx" />
+    <Content Include="Consultas\CVentas.aspx" />
     <Content Include="Content\css\bootstrap-theme.css.map" />
     <Content Include="Content\css\bootstrap.css.map" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
@@ -124,10 +130,12 @@
     <Content Include="Registros\rCategorias.aspx" />
     <Content Include="Registros\rCuadreDetalleVend.aspx" />
     <Content Include="Registros\rCuadreVend.aspx" />
+    <Content Include="Registros\rDetalleVendedor.aspx" />
     <Content Include="Registros\rGastos.aspx" />
     <Content Include="Registros\rPagos.aspx" />
     <Content Include="Registros\RSubsidios.aspx" />
     <Content Include="Registros\RVendedores.aspx" />
+    <Content Include="Registros\RVentas.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -165,6 +173,41 @@
     <Compile Include="BLL\VendedorDetalleBLL.cs" />
     <Compile Include="BLL\VendedoresBLL.cs" />
     <Compile Include="BLL\VentasBLL.cs" />
+    <Compile Include="Consultas\cCuadreVendedor.aspx.cs">
+      <DependentUpon>cCuadreVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCuadreVendedor.aspx.designer.cs">
+      <DependentUpon>cCuadreVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cDetalleVendedor.aspx.cs">
+      <DependentUpon>cDetalleVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cDetalleVendedor.aspx.designer.cs">
+      <DependentUpon>cDetalleVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cGastos.aspx.cs">
+      <DependentUpon>cGastos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cGastos.aspx.designer.cs">
+      <DependentUpon>cGastos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cPagos.aspx.cs">
+      <DependentUpon>cPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cPagos.aspx.designer.cs">
+      <DependentUpon>cPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CVentas.aspx.cs">
+      <DependentUpon>CVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\CVentas.aspx.designer.cs">
+      <DependentUpon>CVentas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\GestionVentaDb.cs" />
     <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\Repositorio.cs" />
@@ -214,6 +257,13 @@
     <Compile Include="Registros\rCuadreVend.aspx.designer.cs">
       <DependentUpon>rCuadreVend.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rDetalleVendedor.aspx.cs">
+      <DependentUpon>rDetalleVendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rDetalleVendedor.aspx.designer.cs">
+      <DependentUpon>rDetalleVendedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rGastos.aspx.cs">
       <DependentUpon>rGastos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +291,13 @@
     </Compile>
     <Compile Include="Registros\RVendedores.aspx.designer.cs">
       <DependentUpon>RVendedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RVentas.aspx.cs">
+      <DependentUpon>RVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\RVentas.aspx.designer.cs">
+      <DependentUpon>RVentas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
