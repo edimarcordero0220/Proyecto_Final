@@ -8,9 +8,10 @@ namespace GestionDeVentas
 {
     public static class Utilidades
     {
-        public static int TOINT(string nombre)
+        public static int TOINT(string num)
         {
-            int.TryParse(nombre, out int numero);
+            int numero = 0;
+            int.TryParse(num, out numero);
             return numero;
         }
 
@@ -37,6 +38,7 @@ namespace GestionDeVentas
 
             return Id;
         }
-    
-}
+      
+
+    }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Web;
 using GestionDeVentas.DAL;
 using GestionDeVentas.Entidades;
@@ -56,7 +55,7 @@ namespace GestionDeVentas.BLL
             lista = db.vendedores.Where(a => a.Nombres == tmp).ToList();
             return lista;
         }
-        public static List<Entidades.Vendedores> GetList(Expression<Func<Entidades.Vendedores, bool>> criterioBusqueda)
+        public static List<Entidades.Vendedores> GetList(System.Linq.Expressions.Expression<Func<Entidades.Vendedores, bool>> criterioBusqueda)
         {
             using (var repositorio = new Repositorio<Vendedores>())
             {
@@ -73,6 +72,5 @@ namespace GestionDeVentas.BLL
 
             return lista;
         }
-
     }
 }

@@ -9,43 +9,18 @@ using GestionDeVentas.Entidades;
 
 namespace GestionDeVentas.Registros
 {
-    public partial class rGastos : System.Web.UI.Page
+    public partial class rPagos : System.Web.UI.Page
     {
-       // Vendedores Vendedor = new Vendedores();
-        Gastos gasto = new Gastos();
-        GastosBLL g = new GastosBLL();
-        int GastoId = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
-            {
-                int.TryParse(Request.QueryString["GastoId"], out GastoId);
-                if (GastoId > 0)
-                {
-                    g.Buscar(GastoId);
-                    ConceptoTextBox.Text = gasto.Concepto;
-                    //g.Fecha = Convert.ToDateTime(FechaTextBox.Text);
-                    MontoTextBox.Text = Convert.ToString(gasto.Monto);
-                    Buscar(GastoId);
-
-                }
-            }
-
-
             FechaTextBox.Text = DateTime.Now.ToString("dd/MM/yyyy");
             if (!Page.IsPostBack)
             {
-                //todo: query string que permita buscar un id
+
                 LLenarComboVendedor();
 
             }
-        }
-        void Buscar(int id)
-        {
-            Gastos g = new Gastos();
-            ConceptoTextBox.Text = g.Concepto;
-            MontoTextBox.Text = Convert.ToString(g.Monto);
+
         }
         public void LLenarComboVendedor()
         {
@@ -55,29 +30,28 @@ namespace GestionDeVentas.Registros
             VendedorDropDownList1.DataBind();
 
         }
-        public void LlenarClase(Gastos g)
+        public void LlenarClase(Pagos p)
         {
 
-            g.Fecha = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
-            g.VendedorId = Utilidades.ValidarIdEntero(VendedorDropDownList1.SelectedValue);
-            g.Concepto = ConceptoTextBox.Text;
-            g.Monto = Utilidades.TOINT(MontoTextBox.Text);
+            p.Fecha = Convert.ToDateTime(FechaTextBox.Text);
+
+            p.Concepto = ConceptoTextBox.Text;
+            p.Monto = Utilidades.TOINT(MontoTextBox.Text);
 
 
         }
+
         public void Limpiar()
         {
             IdTextBox.Text = "";
-            FechaTextBox.Text = DateTime.Now.ToString();
-            VendedorDropDownList1.ClearSelection();
+
             ConceptoTextBox.Text = "";
             MontoTextBox.Text = "";
 
         }
-        public void BuscarGastos(Gastos gt)
+        public void BuscarPagos(Entidades.Pagos p)
         {
-            
-            if (GastosBLL.Buscarbtn(Utilidades.TOINT(IdTextBox.Text)) == null)
+            if (PagosBLL.Buscar(Utilidades.TOINT(IdTextBox.Text)) == null)
             {
                 Utilidades.ShowToastr(this, "No Existe", "Que Mal", "Error");
 
@@ -86,14 +60,15 @@ namespace GestionDeVentas.Registros
             else
             {
 
-                ConceptoTextBox.Text = gt.Concepto;
-                MontoTextBox.Text = Convert.ToString(gt.Monto);
+
+                ConceptoTextBox.Text = p.Concepto;
+                p.Fecha = Convert.ToDateTime(FechaTextBox.Text);
+                MontoTextBox.Text = Convert.ToString(p.Monto);
 
 
             }
         }
-        
-        protected void BusquedaButton_Click(object sender, EventArgs e)
+        protected void BuscarButton_Click(object sender, EventArgs e)
         {
             if (IdTextBox.Text == "")
             {
@@ -101,8 +76,9 @@ namespace GestionDeVentas.Registros
             }
             else
             {
-                BuscarGastos(GastosBLL.Buscarbtn(Utilidades.TOINT(IdTextBox.Text)));
+                BuscarPagos(PagosBLL.Buscar(Utilidades.TOINT(IdTextBox.Text)));
             }
+
         }
 
         protected void LimpiarCampos_Click(object sender, EventArgs e)
@@ -118,10 +94,9 @@ namespace GestionDeVentas.Registros
             }
             else
             {
-                Entidades.Gastos gasto = new Entidades.Gastos();
-                LlenarClase(gasto);
-                GastosBLL.Insertar(gasto);
-
+                Entidades.Pagos p = new Entidades.Pagos();
+                LlenarClase(p);
+                PagosBLL.Insertar(p);
                 Utilidades.ShowToastr(this, "Guardado con Exitos", "Exito", "success");
                 Limpiar();
             }
@@ -135,15 +110,15 @@ namespace GestionDeVentas.Registros
             }
             else
             {
-                if (GastosBLL.Buscarbtn(Utilidades.TOINT(IdTextBox.Text)) == null)
+                if (PagosBLL.Buscar(Utilidades.TOINT(IdTextBox.Text)) == null)
                 {
                     Utilidades.ShowToastr(this, "No Existe", "Que Mal", "Error");
-
                 }
                 else
                 {
-                    GastosBLL.Eliminar(Utilidades.TOINT(IdTextBox.Text));
+                    PagosBLL.Eliminar(Utilidades.TOINT(IdTextBox.Text));
                     Utilidades.ShowToastr(this, "Proceso Completado", "Exito", "success");
+                    Limpiar();
                 }
 
             }

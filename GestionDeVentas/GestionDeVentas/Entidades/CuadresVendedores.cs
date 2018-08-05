@@ -14,7 +14,7 @@ namespace GestionDeVentas.Entidades
         public int VendedorId { get; set; }
         public DateTime Fecha { get; set; }
         public string Concepto { get; set; }
-        public int Monto { get; set; }
+        public double Monto { get; set; }
         public List<CuadresVendedorDetalles> Lista { get; set; }
 
 

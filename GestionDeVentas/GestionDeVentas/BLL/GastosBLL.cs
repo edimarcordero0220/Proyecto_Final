@@ -91,10 +91,10 @@ namespace GestionDeVentas.BLL
         //}
 
 
-        public static Pagos Buscarbtn(int Id)
+        public static Gastos Buscarbtn(int Id)
         {
             GestionVentaDb db = new GestionVentaDb();
-            return db.pago.Find(Id);
+            return db.gasto.Find(Id);
         }
         public static List<Gastos> GetListaVendedor(int tmp)
         {
