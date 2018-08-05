@@ -121,6 +121,8 @@
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\font-awesome\js\jquery-1.10.2.min.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Registros\rCategorias.aspx" />
+    <Content Include="Registros\rCuadreDetalleVend.aspx" />
     <Content Include="Registros\rCuadreVend.aspx" />
     <Content Include="Registros\rGastos.aspx" />
     <Content Include="Registros\rPagos.aspx" />
@@ -188,6 +190,20 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rCategorias.aspx.cs">
+      <DependentUpon>rCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCategorias.aspx.designer.cs">
+      <DependentUpon>rCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rCuadreDetalleVend.aspx.cs">
+      <DependentUpon>rCuadreDetalleVend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rCuadreDetalleVend.aspx.designer.cs">
+      <DependentUpon>rCuadreDetalleVend.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registros\rCuadreVend.aspx.cs">
       <DependentUpon>rCuadreVend.aspx</DependentUpon>
