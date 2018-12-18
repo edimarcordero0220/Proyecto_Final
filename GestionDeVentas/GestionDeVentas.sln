@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDeVentas", "GestionDeVentas\GestionDeVentas.csproj", "{7FA7B903-D8E9-4440-96AB-D072B8D83EBE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLLtest", "BLLtest", "{221D6DEE-1924-41C4-8FF1-660F8EB3AFB3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\BLLtest.csproj = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\BLLtest.csproj
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\CategoriaBLLTest.cs = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\CategoriaBLLTest.cs
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\CuadreVendedorTest.cs = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\CuadreVendedorTest.cs
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\GastosTest.cs = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\GastosTest.cs
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\packages.config = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\packages.config
+		..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\PagosTest.cs = ..\..\..\..\Desktop\tp\Wizoo\Proyecto Final\BLLtest\PagosTest.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
